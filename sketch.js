@@ -249,7 +249,7 @@ function draw(){
 	//fill(198,188,3);	
 	//fill(255,255,0);
 	fill(110,97,1);
-	
+	textAlign(LEFT);
 	document.title= "SNAK: POINTS: " +points;
 		text("Poeng: " + points,30,35);
 	text("Snak: " +count,30,45);
