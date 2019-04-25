@@ -97,8 +97,10 @@ function draw(){
 			lines.unshift(points);
 			//saveStrings(saveScore,"highscore.txt" );
 	}
-	background(245,245,220);
-	fill(0)
+	//background(245,245,220);
+	background(69,76,86);
+	//	fill(0);
+	fill(198,188,3);
 	rect(0,0,w,h);
 		if(count % round(speed) == 0 && !dead){
 		snakx.unshift(x);
@@ -106,7 +108,6 @@ function draw(){
 	
 	x+=nx;
 	y+=ny;
-	
 	}
 	if(checkKollisjon2()){
 			fill(100,10,100);
@@ -131,8 +132,10 @@ function draw(){
 	
 	
 	
-	//EPLE: 
-	fill(0,255,0);
+	//EPLE:
+	
+	fill(110,97,1);
+	//	fill(0,255,0);
 	rect((w/sz)*epx,(h/sz)*epy,(w/sz)-space,(h/sz)-space);
 	
 	if(x==epx && y == epy){
@@ -147,7 +150,8 @@ function draw(){
 		//speed-=.1;
 	}
 		//HODE: 
-	fill(255,0,0);
+	
+		//fill(255,0,0);
 	rect((w/sz)*x,(h/sz)*y,(w/sz)-space,(h/sz)-space);
 	
 	
@@ -158,11 +162,12 @@ function draw(){
 	for(b=0;b<len;b++){
 		
 		//fill(map(b,0,len,200,50),0,0);
-		rainbow(b % 6);
+		//rainbow(b % 6);
+		
 		rect((w/sz)*snakx[b],(h/sz)*snaky[b],(w/sz)-space,(h/sz)-space);
 	}
 	//HALE:
-	fill(100,10,100);
+	//fill(100,10,100);
 	rect((w/sz)*snakx[len],(h/sz)*snaky[len],(w/sz)-space,(h/sz)-space);
 	//MOVES:
 	if(!mov && !dead){
@@ -198,12 +203,12 @@ function draw(){
 	}
 	}
 	if(mouse){
-		fill(255,50,50,80);
+		fill(196,197,188);
 		rectMode(CENTER);
 		rect((windowWidth/2)-25,windowHeight-(windowHeight/3),25,25); //Venstre knapp
 		
 		rect((windowWidth/2)+25,windowHeight-(windowHeight/3),25,25); //Høyre knapp
-		fill(50,255,50,80);
+		fill(183,183,175);
 		rect((windowWidth/2),windowHeight-(windowHeight/3)-25,25,25); // Opp knapp
 		rect((windowWidth/2),windowHeight-(windowHeight/3)+25,25,25); //Ned knapp
 		rectMode(CORNER)
@@ -237,7 +242,9 @@ function draw(){
 	mov= false;
 	count++;
 	//pont.textContent = points;
-		fill(255,255,0);
+	
+	fill(198,188,3);	
+	//fill(255,255,0);
 	document.title= "SNAK: POINTS: " +points;
 		text("Poeng: " + points,30,20);
 	text("Snak: " + snakx[0],30,30);
