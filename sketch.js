@@ -127,7 +127,8 @@ function draw(){
 	
 	for(b=0;b<len;b++){
 		
-		fill(map(b,0,len,200,50),0,0);
+		//fill(map(b,0,len,200,50),0,0);
+		fill(random(0,255),random(0,255),random(0,255));
 		rect((w/sz)*snakx[b],(h/sz)*snaky[b],(w/sz)-space,(h/sz)-space);
 	}
 	//HALE:
