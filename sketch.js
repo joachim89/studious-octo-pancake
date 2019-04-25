@@ -256,7 +256,7 @@ function draw(){
 	text("HISCORE: " + lines[0],30,55);
 		if(dead){
 		fill(0,0,0,50);
-		rect(0,(h/2)-50,w,100);
+		rect(0,(h/2)-50,windowWidth,100);
 		fill(255);
 		textAlign(CENTER);
 		text("GAME OVER.\npress space to try again",w/2,(h/2)-10);
