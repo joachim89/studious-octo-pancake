@@ -84,7 +84,8 @@ function setup(){
 
 }
 function draw(){
-	//translate(100,10);
+	push();
+	translate(20,20);
 	if(mouseIsPressed){
 		mouse=true;
 	}
@@ -202,6 +203,7 @@ function draw(){
 		}
 	}
 	}
+	pop();
 	if(mouse){
 		fill(196,197,188);
 		rectMode(CENTER);
@@ -243,12 +245,14 @@ function draw(){
 	count++;
 	//pont.textContent = points;
 	
-	fill(198,188,3);	
+	//fill(198,188,3);	
 	//fill(255,255,0);
+	fill(110,97,1);
+	
 	document.title= "SNAK: POINTS: " +points;
-		text("Poeng: " + points,30,20);
-	text("Snak: " + snakx[0],30,30);
-	text("HISCORE: " + lines[0],30,40);
+		text("Poeng: " + points,30,35);
+	text("Snak: " +count,30,45);
+	text("HISCORE: " + lines[0],30,55);
 		if(dead){
 		fill(0,0,0,50);
 		rect(0,(h/2)-50,w,100);
