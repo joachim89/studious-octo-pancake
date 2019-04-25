@@ -22,6 +22,7 @@ let mouse=true;
 
 const pont = document.getElementById("poeng");
 function rainbow(farge){
+	if(farge){
 	switch(farge){
 	case 0:
 	fill(148, 0, 211);
@@ -44,7 +45,10 @@ function rainbow(farge){
 	case 6:
 	fill(255,0,0);
 	break;
+	default:
+	fill(255,0,0);
 }
+}else{fill(255,0,0);}
 }
 function checkKollisjon(){
 	//console.log("initiate kollisjonssjekk...");
@@ -154,7 +158,7 @@ function draw(){
 	for(b=0;b<len;b++){
 		
 		//fill(map(b,0,len,200,50),0,0);
-		regnbue(b % 7);
+		rainbow(b % 6);
 		rect((w/sz)*snakx[b],(h/sz)*snaky[b],(w/sz)-space,(h/sz)-space);
 	}
 	//HALE:
