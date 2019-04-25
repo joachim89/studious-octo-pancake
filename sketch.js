@@ -206,13 +206,14 @@ function draw(){
 	pop();
 	if(mouse){
 		fill(196,197,188);
+		noStroke();
 		rectMode(CENTER);
-		rect((windowWidth/2)-25,windowHeight-(windowHeight/3),25,25); //Venstre knapp
+		rect((windowWidth/2)-75,windowHeight-(windowHeight/3),75,75); //Venstre knapp
 		
-		rect((windowWidth/2)+25,windowHeight-(windowHeight/3),25,25); //Høyre knapp
+		rect((windowWidth/2)+75,windowHeight-(windowHeight/3),75,75); //Høyre knapp
 		fill(183,183,175);
-		rect((windowWidth/2),windowHeight-(windowHeight/3)-25,25,25); // Opp knapp
-		rect((windowWidth/2),windowHeight-(windowHeight/3)+25,25,25); //Ned knapp
+		rect((windowWidth/2),windowHeight-(windowHeight/3)-75,75,75); // Opp knapp
+		rect((windowWidth/2),windowHeight-(windowHeight/3)+75,75,75); //Ned knapp
 		rectMode(CORNER)
 	}
 	if(mouseIsPressed){
