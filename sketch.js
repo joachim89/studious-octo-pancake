@@ -19,8 +19,33 @@ let lines = [];
 let saveScore = [];
 let dead=false;
 let mouse=true;
-const pont = document.getElementById("poeng");
 
+const pont = document.getElementById("poeng");
+function rainbow(farge){
+	switch(farge){
+	case 0:
+	fill(148, 0, 211);
+	break;
+	case 1:
+	fill(75, 0, 130	);
+	break;
+	case 2:
+	fill(0, 0, 255	);
+	break;
+	case 3:
+	fill(0,255,0);
+	break;
+	case 4:
+	fill(255, 255, 0	);
+	break;
+	case 5:
+	fill(255, 127, 0);
+	break;
+	case 6:
+	fill(255,0,0);
+	break;
+}
+}
 function checkKollisjon(){
 	//console.log("initiate kollisjonssjekk...");
 		for(let i=0; i < len; i++){
@@ -51,6 +76,7 @@ function setup(){
 	//frameRate(15);
 	lines = loadStrings("highscore.txt");
 	console.log(lines);
+	
 
 }
 function draw(){
@@ -128,7 +154,7 @@ function draw(){
 	for(b=0;b<len;b++){
 		
 		//fill(map(b,0,len,200,50),0,0);
-		fill(random(0,255),random(0,255),random(0,255));
+		regnbue(b % 7);
 		rect((w/sz)*snakx[b],(h/sz)*snaky[b],(w/sz)-space,(h/sz)-space);
 	}
 	//HALE:
