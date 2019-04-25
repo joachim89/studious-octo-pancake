@@ -47,7 +47,7 @@ function checkKollisjon2(){
 	return false;
 }
 function setup(){
-	createCanvas(windowWidth, windowHeight);
+	if(windowWidth<1080){createCanvas(windowWidth, windowHeight);}elsecreateCanvas(windowWidth-50, windowHeight-50);}
 	//frameRate(15);
 	lines = loadStrings("highscore.txt");
 	console.log(lines);
