@@ -205,15 +205,15 @@ function draw(){
 	}
 	pop();
 	if(mouse){
-		fill(196,197,188);
+		fill(196,197,188,80);
 		noStroke();
 		rectMode(CENTER);
-		rect((windowWidth/2)-75,windowHeight-(windowHeight/3),75,75); //Venstre knapp
+		rect((windowWidth/2)-75,windowHeight-(windowHeight/4),75,75); //Venstre knapp
 		
-		rect((windowWidth/2)+75,windowHeight-(windowHeight/3),75,75); //Høyre knapp
+		rect((windowWidth/2)+75,windowHeight-(windowHeight/4),75,75); //Høyre knapp
 		fill(183,183,175);
-		rect((windowWidth/2),windowHeight-(windowHeight/3)-75,75,75); // Opp knapp
-		rect((windowWidth/2),windowHeight-(windowHeight/3)+75,75,75); //Ned knapp
+		rect((windowWidth/2),windowHeight-(windowHeight/4)-75,75,75); // Opp knapp
+		rect((windowWidth/2),windowHeight-(windowHeight/4)+75,75,75); //Ned knapp
 		rectMode(CORNER)
 	}
 	if(mouseIsPressed){
